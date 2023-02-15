@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     screens: {
@@ -11,7 +12,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Open Sans', 'sans-serif'],
-      heading: ['Oswald', 'sans-serif']
+      heading: ['Poppins', 'sans-serif']
     },
     extend: {
       colors: {
@@ -26,5 +27,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('flowbite/plugin')
+  ],
 }
