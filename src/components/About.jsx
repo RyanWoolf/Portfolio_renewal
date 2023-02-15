@@ -13,10 +13,10 @@ const About = () => {
   })
 
   return (
-    <article name="About" className="bg-main-100 flex flex-col justify-center items-center w-screen h-fit min-h-screen p-8 text-left">
+    <article name="About" className="bg-main-200 flex flex-col justify-center items-center w-screen h-fit min-h-screen p-8 text-left">
       <div className="max-w-xs items-center justify-center">
-        <h1 className="inline tracking-wider font-heading text-2xl ">About </h1>
-        <h1 className="inline tracking-wider font-heading text-2xl text-sub-2">Ryan</h1>
+        <h1 className="inline font-heading font-bold text-2xl ">About </h1>
+        <h1 className="inline font-heading  font-bold text-2xl text-sub-2">Ryan</h1>
         <div className="flex-col py-6">
           <h2 className="tracking-tight font-bold text-sm mb-2">Design to Web</h2>
           <p className="font-sans font-light text-xs">There is so many good web design projects. But if you can't substantiate them on the web, it's only imaginary project. I'm here to lead that to the real world with UI/UX and web development skills. </p>
@@ -28,11 +28,11 @@ const About = () => {
           <div className="my-5 rounded-full border bg-contain w-44 h-44 bg-[url('./assets/profilephoto.jpg')]"></div>
           <a className="text-sub-2 block rounded-full border-sub-2 px-2 py-1 mb-8 align-middle font-light text-xs border hover:text-main-200 hover:bg-sub-2" href="">Resume</a>
         </div>
-        <h1 className="tracking-wider font-heading text-2xl text-sub-2">Skills stack </h1>
+        <h1 className="font-heading font-bold text-2xl text-sub-2">Skills stack </h1>
         <div className="flex-col py-6">
           <h2 className="tracking-tight font-bold text-sm mb-2">Languages</h2>
           <div className="flex flex-wrap mb-5">
-            <p className="text-sm block">JavaScript, Python, PHP, HTML, CSS</p>
+            <p className="text-xs block">JavaScript, Python, PHP, HTML, CSS</p>
             {/* {languages.map(image => {
               return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/languages/${image}.png`}></img>
             })
@@ -40,7 +40,7 @@ const About = () => {
           </div>
           <h2 className="tracking-tight font-bold text-sm mb-2">Libraries</h2>
           <div className="flex flex-wrap mb-5">
-          <p className="text-sm block">React, Node, Express, Flask, Laravel, TailwindCSS, Pytest, Jest, Cypress</p>
+          <p className="text-xs block">React, Node, Express, Flask, Laravel, TailwindCSS, Pytest, Jest, Cypress</p>
             {/* {libraries.map(image => {
               return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/libraries/${image}.png`}></img>
             })
@@ -49,7 +49,7 @@ const About = () => {
           </div>
           <h2 className="tracking-tight font-bold text-sm mb-2">Databases</h2>
           <div className="flex flex-wrap mb-5">
-          <p className="text-sm block">PostgreSQL, MongoDB</p>
+          <p className="text-xs block">PostgreSQL, MongoDB</p>
             {/* {databases.map(image => {
               return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/databases/${image}.png`}></img>
             })
@@ -57,7 +57,7 @@ const About = () => {
           </div>
           <h2 className="tracking-tight font-bold text-sm mb-2">Design</h2>
           <div className="flex flex-wrap mb-5">
-          <p className="text-sm block">Figma, illustrator, Photoshop, Xd</p>
+          <p className="text-xs block">Figma, illustrator, Photoshop, Xd</p>
             {/* {design.map(image => {
               return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/design/${image}.png`}></img>
             })
@@ -65,7 +65,7 @@ const About = () => {
           </div>
           <h2 className="tracking-tight font-bold text-sm mb-2">Management</h2>
           <div className="flex flex-wrap mb-5">
-          <p className="text-sm block">Trello, Git, Github</p>
+          <p className="text-xs block">Trello, Git, Github</p>
             {/* {management.map(image => {
               return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/management/${image}.png`}></img>
               })
