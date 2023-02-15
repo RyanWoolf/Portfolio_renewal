@@ -13,14 +13,12 @@ export default function Navbar() {
     
 
     return (
-    <div id="slideMenu"  className={`shadow-neutral-900 shadow-md w-screen absolute top-0 left-0 isOpen ${isOpen ? 'top-16' : 'hidden'}`} >
-      <div id="menu-container" aria-label="menu"  
-      className="bg-stone-800 w-screen">     
-        <Link className="block" to="#Home" name="Home" onClick={toggleState}>Home</Link>
-        <Link className="block" to="#About" name="About" onClick={toggleState}>About</Link>
-        <Link className="block" to="#Skills" name="Skills" onClick={toggleState}>Skills</Link>
-        <Link className="block" to="#Projects" name="Projects" onClick={toggleState}>Projects</Link>
-        <Link className="block" to="#Contact" name="Contact" onClick={toggleState}>Contact</Link>  
+    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-screen absolute top-0 left-0 isOpen ${isOpen ? 'top-12' : 'hidden'}`} >
+      <div id="menu-container" aria-label="menu" className="bg-main-200 w-screen">     
+        <Link className="block py-3" to="#Home" name="Home" onClick={toggleState}>Home</Link>
+        <Link className="block py-3" to="#About" name="About" onClick={toggleState}>About</Link>
+        <Link className="block py-3" to="#Projects" name="Projects" onClick={toggleState}>Projects</Link>
+        <Link className="block py-3" to="#Contact" name="Contact" onClick={toggleState}>Contact</Link>  
       </div>
     </div>
 
@@ -29,13 +27,13 @@ export default function Navbar() {
 
   return (
     <>
-      <div id="menu-wrapper" onBlur={()=>setOpen(false)} className="flex relative z-5 flex-col justify-center h-16 py-6 sm:py-12">
+      <div id="menu-wrapper" onBlur={()=>setOpen(false)} className="flex shadow-lg shadow-neutral-900 sticky top-0 z-500 flex-col justify-center h-10">
         <MenuBox />
-        <div className="relative z-5 bg-stone-900 w-screen py-3 mx-auto px-4 sm:max-w-xl flex justify-between ">
-          <h1 className="font-heading font-extrabold text-2xl text-left text-gray-400 pt-1">LW</h1>
+        <div className="relative z-500 bg-main-200 w-screen py-3 mx-auto px-4 sm:max-w-xl flex justify-between ">
+          <h1 className="font-heading font-extrabold text-2xl text-left text-gray-400 pt-">LW</h1>
           <nav>
             <button
-              className="z-10 relative w-10 h-10 text-gray-500 rounded-sm focus:outline-none"
+              className="z-1000 relative w-10 h-6 text-gray-500 rounded-sm focus:outline-none"
               onClick={toggleState}>
               <span className="sr-only">Open main menu</span>
               <div className="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
