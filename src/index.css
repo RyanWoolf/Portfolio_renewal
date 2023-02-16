@@ -21,3 +21,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+body {
+  min-width: 320px;
+}
+
+#projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+

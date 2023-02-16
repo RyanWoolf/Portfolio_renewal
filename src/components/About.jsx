@@ -13,8 +13,8 @@ const About = () => {
   })
 
   return (
-    <article name="About" className="bg-main-200 flex flex-col justify-center items-center w-screen h-fit min-h-screen p-8 text-left">
-      <div className="max-w-xs items-center justify-center">
+    <article name="About" className="bg-main-100 flex flex-col justify-center items-center w-screen h-fit min-h-screen p-8 text-left">
+      <div className="max-w-xs items-center justify-center mt-5">
         <h1 className="inline font-heading font-bold text-2xl ">About </h1>
         <h1 className="inline font-heading  font-bold text-2xl text-sub-2">Ryan</h1>
         <div className="flex-col py-6">
@@ -34,7 +34,7 @@ const About = () => {
           <div className="flex flex-wrap mb-5">
             <p className="text-xs block">JavaScript, Python, PHP, HTML, CSS</p>
             {/* {languages.map(image => {
-              return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/languages/${image}.png`}></img>
+              return <img className="w-6 inline m-1" key={image} src={`../src/assets/icons/skills/languages/${image}.png`}></img>
             })
           } */}
           </div>
@@ -42,7 +42,7 @@ const About = () => {
           <div className="flex flex-wrap mb-5">
           <p className="text-xs block">React, Node, Express, Flask, Laravel, TailwindCSS, Pytest, Jest, Cypress</p>
             {/* {libraries.map(image => {
-              return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/libraries/${image}.png`}></img>
+              return <img className="w-6 inline m-1" key={image} src={`../src/assets/icons/skills/libraries/${image}.png`}></img>
             })
           } */}
 
@@ -51,7 +51,7 @@ const About = () => {
           <div className="flex flex-wrap mb-5">
           <p className="text-xs block">PostgreSQL, MongoDB</p>
             {/* {databases.map(image => {
-              return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/databases/${image}.png`}></img>
+              return <img className="w-6 inline m-1" key={image} src={`../src/assets/icons/skills/databases/${image}.png`} alt={image}></img>
             })
           } */}
           </div>
@@ -59,7 +59,7 @@ const About = () => {
           <div className="flex flex-wrap mb-5">
           <p className="text-xs block">Figma, illustrator, Photoshop, Xd</p>
             {/* {design.map(image => {
-              return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/design/${image}.png`}></img>
+              return <img className="w-6 inline m-1" key={image} src={`../src/assets/icons/skills/design/${image}.png`}></img>
             })
           } */}
           </div>
@@ -67,11 +67,10 @@ const About = () => {
           <div className="flex flex-wrap mb-5">
           <p className="text-xs block">Trello, Git, Github</p>
             {/* {management.map(image => {
-              return <img className="w-8 inline m-1" key={image} src={`../src/assets/icons/skills/management/${image}.png`}></img>
+              return <img className="w-6 inline m-1" key={image} src={`../src/assets/icons/skills/management/${image}.png`}></img>
               })
             } */}
           </div>
-
         </div>
       </div>
       <div className="max-w-xs items-center justify-center">
