@@ -72,11 +72,11 @@ const Contact = () => {
 
 
   return (
-    <article name="Contact" className="bg-main-100 flex flex-col justify-start items-center w-screen h-auto p-8 text-left">
-      <div className="max-w-[400px] w-full">
+    <article name="Contact" className="bg-main-100 flex flex-col justify-center items-center w-full h-fit min-h-[650px] px-8 pt-8 text-left">
+      <div className="max-w-[400px] w-full flex flex-col justify-center">
         <h1 className="block self-start font-heading font-bold text-2xl text-sub-2">Contact</h1>
         <p className="font-sans font-light text-xs">Feel free to ask me anything about me.</p>
-        <form className="w-full max-w-[550px] flex flex-col justify-center items-center my-5" ref={form} onSubmit={sendEmail}>
+        <form className="w-full max-w-[550px] flex flex-col justify-center items-center mt-5" ref={form} onSubmit={sendEmail}>
           <div className="relative w-full my-1">
             <input type="text" id="floating_outlined" placeholder=" " name="user_name" required value={values.user_name} onInput={onInput}
               className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
@@ -106,7 +106,7 @@ const Contact = () => {
               {sending()}
             </div>
           </button>
-          <div className={"flex items-center px-3 py-2 text-xs duration-500 transition text-green-400 border border-green-300 rounded-lg bg-transparent " + alert} role="alert">
+          <div className={"flex items-center px-3 py-2 text-xs duration-500 transition text-green-400 border border-green-300 rounded-lg bg-transparent " + alert } role="alert">
             <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <span className="sr-only">Info</span>
             <div>

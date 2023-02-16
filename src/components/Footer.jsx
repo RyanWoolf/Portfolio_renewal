@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-  <footer class="bg-main-200 flex flex-col justify-center items-center">
+  <footer class="bg-main-200 flex flex-col justify-center items-center h-fit">
     <div class="px-4 py-4">
       <div class="flex justify-center items-center mt-4 space-x-4">
         <a href="https://m.facebook.com/100001865445521/" target="_blank" class="text-gray-400 hover:text-gray-300 ">

@@ -123,18 +123,19 @@ const Projects = () => {
 
 
   return (
-    <article name="Projects" className="bg-main-200 flex flex-col justify-center items-center w-screen h-screen min-h-screen p-8 text-left">
-      <div className="">
-        <h1 className="font-heading font-bold text-2xl text-sub-2 px-8">Projects</h1>
-        <div className="flex items-center justify-center relative ">
-          <div className="absolute z-10 top-1/2 w-full flex justify-between px-2">  
-            <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 "} src="../src/assets/icons/icon_arrow_back.png"/></Link> 
-            <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5" src="../src/assets/icons/icon_arrow_forward.png"/></Link>
+    <article name="Projects" className="bg-main-200 flex flex-col justify-start items-start w-full h-fit min-h-[740px] p-8 text-left">
+      <div className="max-w-xs mt-5">
+        <h1 className="font-heading font-bold text-2xl text-sub-2">Projects</h1>
+        <div id="carousel-container" className="absolute left-0 w-full h-full">
+          <div className="flex items-center justify-center relative ">
+            <div className="absolute z-10 top-1/2 w-full flex justify-between px-2">  
+              <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 "} src="../src/assets/icons/icon_arrow_back.png"/></Link> 
+              <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5" src="../src/assets/icons/icon_arrow_forward.png"/></Link>
+            </div>
+            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[32rem] w-screen scroll-smooth snap-x snap-mandatory">
+              {projectsCards}
+            </div>
           </div>
-          <div id="projects-carousel" className="my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[32rem] w-screen min-w-[320px] max-w-[440px] scroll-smooth snap-x snap-mandatory">
-            {projectsCards}
-          </div>
-          
         </div>
       </div>
     </article>

@@ -13,12 +13,12 @@ export default function Navbar() {
     
 
     return (
-    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-screen min-w-[320px] absolute top-12 left-0`} >
-      <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 w-screen min-w-[320px] ${isOpen?'visible':'hidden'}`}>     
+    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-full absolute top-12 left-0`} >
+      <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 w-full  ${isOpen?'visible':'hidden'}`}>     
         <Link className="block py-3" to="#Home" name="Home" onClick={toggleState}>Home</Link>
         <Link className="block py-3" to="#About" name="About" onClick={toggleState}>About</Link>
         <Link className="block py-3" to="#Projects" name="Projects" onClick={toggleState}>Projects</Link>
-        <Link className="block py-3" to="#Contact" name="Contact" onClick={toggleState}>Contact</Link>  
+        <Link className="block py-3" to="#slideMenu" name="Contact" onClick={toggleState}>Contact</Link>  
       </div>
     </div>
 
@@ -27,9 +27,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div id="menu-wrapper" onBlur={()=>setOpen(false)} className="flex shadow-lg shadow-neutral-900 sticky min-w-[320px] top-0 z-20 flex-col justify-center h-10">
+      <div onBlur={()=>setOpen(false)} className="flex shadow-lg shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-10">
         <MenuBox />
-        <div className="relative bg-main-200 w-screen py-3 mx-auto px-4 sm:max-w-xl flex justify-between ">
+        <div className="relative bg-main-200 w-full py-3 px-4 sm:max-w-xl flex justify-between ">
           <h1 className="font-heading font-extrabold text-2xl text-left text-gray-400 pt-">LW</h1>
           <nav>
             <button
