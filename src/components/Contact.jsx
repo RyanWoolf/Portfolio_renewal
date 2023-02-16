@@ -51,9 +51,7 @@ const Contact = () => {
 
 
   const sending = () => {
-    if (isSending === "0") {
-      return "Send"
-    } else if (isSending === "1") {
+    if (isSending === "1") {
       return (
         <>
           <svg aria-hidden="true" className="inline w-4 h-4 text-gray-200 animate-spin fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,52 +65,56 @@ const Contact = () => {
       return (
         <img src="../src/assets/icons/icon_done_white.png" className="w-4 h-4 rounded-full border-gray-200 border-solid border-2" />
       )
+    } else {
+      return "Send"
     }
   }
 
 
   return (
-    <article name="Contact" className="bg-main-200 flex flex-col justify-start  w-screen h-screen min-h-screen p-8 text-left">
-      <h1 className="block self-start font-heading font-bold text-2xl text-sub-2">Contact</h1>
-      <p className="font-sans font-light text-xs">Feel free to ask me anything about me.</p>
-      <form className="w-full flex flex-col justify-center items-center my-5" ref={form} onSubmit={sendEmail}>
-        <div className="relative w-full my-1">
-          <input type="text" id="floating_outlined" placeholder=" " name="user_name" required value={values.user_name} onInput={onInput}
-            className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
-          <label for="floating_outlined" 
-            className="absolute text-xs text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-main-200  px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Name *</label>
-        </div>
-        <div className="relative w-full my-1">
-          <input type="email" id="floating_outlined" placeholder=" " name="user_email" required value={values.user_email} onInput={onInput}
-            className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
-          <label for="floating_outlined" 
-            className="absolute text-xs text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Email *</label>
-        </div>
-        <div className="relative w-full my-1">
-          <input type="tel" id="floating_outlined" placeholder=" " name="user_phone"  value={values.user_phone} onInput={onInput}
-            className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
-          <label for="floating_outlined" 
-            className="absolute text-xs text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Contact</label>
-        </div>
-        <div className="relative w-full my-1">
-          <textarea id="floating_outlined" placeholder=" " name="message" required rows="8" value={values.message} onInput={onInput}
-            className="resize-none block px-2.5 pb-2.5 pt-4 w-full text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
-          <label for="floating_outlined" 
-            className="absolute block top-3 text-xs text-gray-500 duration-300 transform -translate-y-5 scale-75 z-10 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1">Message *</label>
-        </div>
-        <button className="my-4 bg-sub-1 w-20 h-7 rounded-full text-xs" type="submit">
-          <div role="status" className="flex flex-col justify-center items-center">
-            {sending()}
+    <article name="Contact" className="bg-main-100 flex flex-col justify-center items-center w-full h-fit min-h-[650px] px-8 pt-8 text-left">
+      <div className="max-w-[400px] w-full flex flex-col justify-center">
+        <h1 className="block self-start font-heading font-bold text-2xl text-sub-2">Contact</h1>
+        <p className="font-sans font-light text-xs">Feel free to ask me anything about me.</p>
+        <form className="w-full max-w-[550px] flex flex-col justify-center items-center mt-5" ref={form} onSubmit={sendEmail}>
+          <div className="relative w-full my-1">
+            <input type="text" id="floating_outlined" placeholder=" " name="user_name" required value={values.user_name} onInput={onInput}
+              className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
+            <label for="floating_outlined" 
+              className="absolute text-xs text-gray-400  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100  px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Name *</label>
           </div>
-        </button>
-        <div className={"flex items-center px-3 py-2 text-xs duration-500 transition text-green-400 border border-green-300 rounded-lg bg-transparent " + alert} role="alert">
-          <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-          <span className="sr-only">Info</span>
-          <div>
-            <span className="font-medium">Thanks for contact!<br></br> I'll reply as soon as possible.</span>
+          <div className="relative w-full my-1">
+            <input type="email" id="floating_outlined" placeholder=" " name="user_email" required value={values.user_email} onInput={onInput}
+              className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
+            <label for="floating_outlined" 
+              className="absolute text-xs text-gray-400  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Email *</label>
           </div>
-        </div>
-      </form>
+          <div className="relative w-full my-1">
+            <input type="tel" id="floating_outlined" placeholder=" " name="user_phone"  value={values.user_phone} onInput={onInput}
+              className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
+            <label for="floating_outlined" 
+              className="absolute text-xs text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Contact</label>
+          </div>
+          <div className="relative w-full my-1">
+            <textarea id="floating_outlined" placeholder=" " name="message" required rows="8" value={values.message} onInput={onInput}
+              className="resize-none block px-2.5 pb-2.5 pt-4 w-full text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
+            <label for="floating_outlined" 
+              className="absolute block top-3 text-xs text-gray-400 duration-300 transform -translate-y-5 scale-75 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1">Message *</label>
+          </div>
+          <button className="my-4 bg-sub-1 w-20 h-7 rounded-full text-xs " type="submit">
+            <div role="status" className="relative flex flex-col justify-center items-center">
+              {sending()}
+            </div>
+          </button>
+          <div className={"flex items-center px-3 py-2 text-xs duration-500 transition text-green-400 border border-green-300 rounded-lg bg-transparent " + alert } role="alert">
+            <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+            <span className="sr-only">Info</span>
+            <div>
+              <span className="font-medium">Thanks for contact!<br></br> I'll reply as soon as possible.</span>
+            </div>
+          </div>
+        </form>
+      </div>
     </article>
 
   )

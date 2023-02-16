@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -9,12 +10,19 @@ import Projects from './components/Projects'
 function App() {
   return (
     <>
-      <Landing/>
-      <Navbar/>
-      <About/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+    <Landing/>
+
+    <Navbar/>
+    <About/>
+    <Projects/>
+    <Contact/>
+    {/* <Routes>
+      <Route path='/' element={<Landing/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/projects' element={<Projects/>} />
+      <Route path='/contact' element={<Contact/>} />
+    </Routes> */}
+    <Footer/>
     </>
   )
 }
