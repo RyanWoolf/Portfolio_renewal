@@ -80,25 +80,25 @@ const Contact = () => {
           <input type="text" id="floating_outlined" placeholder=" " name="user_name" required value={values.user_name} onInput={onInput}
             className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
           <label for="floating_outlined" 
-            className="absolute text-xs text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-main-200  px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Name *</label>
+            className="absolute text-xs text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-200  px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Name *</label>
         </div>
         <div className="relative w-full my-1">
           <input type="email" id="floating_outlined" placeholder=" " name="user_email" required value={values.user_email} onInput={onInput}
             className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
           <label for="floating_outlined" 
-            className="absolute text-xs text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Email *</label>
+            className="absolute text-xs text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Email *</label>
         </div>
         <div className="relative w-full my-1">
           <input type="tel" id="floating_outlined" placeholder=" " name="user_phone"  value={values.user_phone} onInput={onInput}
             className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
           <label for="floating_outlined" 
-            className="absolute text-xs text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Contact</label>
+            className="absolute text-xs text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Contact</label>
         </div>
         <div className="relative w-full my-1">
           <textarea id="floating_outlined" placeholder=" " name="message" required rows="8" value={values.message} onInput={onInput}
             className="resize-none block px-2.5 pb-2.5 pt-4 w-full text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
           <label for="floating_outlined" 
-            className="absolute block top-3 text-xs text-gray-500 duration-300 transform -translate-y-5 scale-75 z-10 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1">Message *</label>
+            className="absolute block top-3 text-xs text-gray-500 duration-300 transform -translate-y-5 scale-75 z-5 origin-[0] bg-main-200 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1">Message *</label>
         </div>
         <button className="my-4 bg-sub-1 w-20 h-7 rounded-full text-xs" type="submit">
           <div role="status" className="flex flex-col justify-center items-center">

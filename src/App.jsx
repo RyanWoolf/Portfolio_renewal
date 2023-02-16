@@ -9,8 +9,8 @@ import Projects from './components/Projects'
 function App() {
   return (
     <>
-      <Landing/>
       <Navbar/>
+      <Landing/>
       <About/>
       <Projects/>
       <Contact/>
