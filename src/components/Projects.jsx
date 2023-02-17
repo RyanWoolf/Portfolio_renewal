@@ -90,18 +90,19 @@ const Projects = () => {
   const projectsCards = projects.map((project, idx) => {
       return (<>
             
-        <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-[32rem] bg-cover bg-center min-w-full" style={{backgroundImage: `url(../src/assets/projects/${project.img})`}}>
-          <div className="w-full h-full p-8 relative">
-            <h2 className="text-lg font-bold">{project.name}</h2>
-            <h3 className="text-xs opacity-70">{project.date}</h3>
-            <p className="text-xs">{project.stack}</p>
+        <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
+          style={{backgroundImage: `url(../src/assets/projects/${project.img})`}}>
+          <div className="w-full min-w-[320px] h-full p-8 relative">
+            <h2 className="text-lg font-bold desktop:text-xl">{project.name}</h2>
+            <h3 className="text-xs opacity-70 desktop:text-base">{project.date}</h3>
+            <p className="text-xs  desktop:text-base">{project.stack}</p>
             <div className="z-1 w-full flex justify-center items-center absolute bottom-1/2 left-0 transition duration-500 opacity-0 hover:opacity-100">
               <a className="w-14 h-14 rounded-full bg-sub-2/[0.5] flex justify-center items-center " href={project.link} target="_blank">
                 <svg className="opacity-70" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
                   <path d="M13 10h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2zm8.172 14l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
               </a>
             </div>
-            <p className="origin-[0] w-max absolute bottom-5 pt-4 text-xs rotate-[270deg]">{project.desc}</p>
+            <p className="origin-[0] w-max absolute bottom-5 pt-4 text-xs rotate-[270deg]  desktop:text-base">{project.desc}</p>
           </div>
           
         </div>
@@ -123,16 +124,17 @@ const Projects = () => {
 
 
   return (
-    <article name="Projects" className="bg-main-200 flex flex-col justify-start items-start w-full h-fit min-h-[740px] p-8 text-left">
-      <div className="max-w-xs mt-5">
-        <h1 className="font-heading font-bold text-2xl text-sub-2">Projects</h1>
-        <div id="carousel-container" className="absolute left-0 w-full h-full">
-          <div className="flex items-center justify-center relative ">
-            <div className="absolute z-10 top-1/2 w-full flex justify-between px-2">  
-              <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 "} src="../src/assets/icons/icon_arrow_back.png"/></Link> 
-              <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5" src="../src/assets/icons/icon_arrow_forward.png"/></Link>
+    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[740px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-[65vh] desktop:items-center">
+      <div className="self-center max-w-xs mt-5 top-0">
+        <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
+        <div className=""></div>
+        <div id="carousel-container" className="h-fit w-screen absolute left-0  desktop:flex desktop:justify-center desktop:h-">
+          <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
+            <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
+              <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10"} src="../src/assets/icons/icon_arrow_back.png"/></Link> 
+              <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10" src="../src/assets/icons/icon_arrow_forward.png"/></Link>
             </div>
-            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[32rem] w-screen scroll-smooth snap-x snap-mandatory">
+            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x snap-mandatory desktop:max-h-[700px]">
               {projectsCards}
             </div>
           </div>
