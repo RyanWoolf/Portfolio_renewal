@@ -101,7 +101,7 @@ const Contact = () => {
             <label for="floating_outlined" 
               className="absolute block top-3 text-xs text-gray-400 duration-300 transform -translate-y-5 scale-75 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1 desktop:text-base">Message *</label>
           </div>
-          <button className="my-4 bg-sub-1 w-20 h-7 rounded-full text-xs desktop: desktop:scale-[120%]" type="submit">
+          <button className="my-4 bg-sub-1 hover:drop-shadow-sub1 transition duration-300 w-20 h-7 rounded-full text-xs desktop: desktop:scale-[120%]" type="submit">
             <div role="status" className="relative flex flex-col justify-center items-center">
               {sending()}
             </div>

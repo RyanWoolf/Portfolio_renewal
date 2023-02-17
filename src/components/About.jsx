@@ -47,7 +47,7 @@ const About = () => {
     <article id="About" className="bg-main-100 flex flex-col justify-center items-center w-full h-fit p-8 text-left desktop:pt-12 desktop:min-h-[820px] ">
       <div className="max-w-xs mt-5 desktop:flex desktop:max-w-fit">
         <div className="desktop:w-[400px] desktop:mr-5">
-          <h1 className="inline font-heading font-bold text-xl desktop:text-3xl">About Ryan</h1>
+          <h1 className="inline font-heading font-bold text-xl text-sub-2 desktop:text-3xl">About Ryan</h1>
           <div className="flex-col py-6">
             <h2 className="tracking-tight font-bold text-sm mb-2 desktop:text-xl">Design to Web</h2>
             <p className="font-sans font-light text-xs">There is so many good web design projects. But if you can't substantiate them on the web, it's only imaginary project. I'm here to lead that to the real world with UI/UX and web development skills. </p>
@@ -57,7 +57,7 @@ const About = () => {
           </div>
           <div className="flex flex-col justify-center items-center text-center">
             <div className="my-5 rounded-full border bg-contain w-44 h-44 bg-[url('./assets/profilephoto.jpg')]"></div>
-            <a className="text-sub-2 block rounded-full border-sub-2 px-2 py-1 mb-8 align-middle font-light text-xs transition duration-300 border hover:text-main-200 hover:bg-sub-2" href="">Resume</a>
+            <a className="text-sub-2 block rounded-full border-sub-2 px-3 py-1 mb-8 align-middle text-xs transition duration-300 border hover:drop-shadow-sub2 hover:text-main-200 hover:bg-sub-2 desktop:text-base" href="../src/assets/Resume_RyanLee.pdf" target="_blank">Resume</a>
           </div>
         </div>
         <div className="desktop:w-[400px]">

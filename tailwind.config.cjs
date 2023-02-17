@@ -15,6 +15,10 @@ module.exports = {
       heading: ['Poppins', 'sans-serif']
     },
     extend: {
+      dropShadow: {
+        'sub1': '0 0 7px #6a77fa',
+        'sub2': '0 0 7px #BCA087',
+      },
       colors: {
         main: {
           100: '#2C2D31',

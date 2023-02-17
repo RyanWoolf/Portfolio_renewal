@@ -124,7 +124,7 @@ const Projects = () => {
 
 
   return (
-    <article id="Projects" className="bg-main-100 flex flex-col justify-start w-full h-[90vh] min-h-[740px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-[65vh] desktop:items-center">
+    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[740px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-[65vh] desktop:items-center">
       <div className="self-center max-w-xs mt-5 top-0">
         <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
         <div className=""></div>
