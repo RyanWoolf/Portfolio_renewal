@@ -37,9 +37,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex shadow-lg shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-10">
+      <div className="flex shadow-lg bg-main-200 shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-10">
         <MenuBox />
-        <div className="relative bg-main-200 w-full py-3 px-4 sm:max-w-xl flex justify-between ">
+        <div className="relative bg-main-200 w-full py-3 px-4 sm:max-w-xl flex justify-between desktop:max-w-[1440px] desktop:m-auto">
           <Link href="/" onClick={()=> targets["Home"].scrollIntoView()} ><h1 className="font-heading font-extrabold text-2xl text-left text-gray-400 pt-">LW</h1></Link>
           <nav >
             <button
