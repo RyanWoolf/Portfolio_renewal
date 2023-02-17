@@ -21,11 +21,11 @@ export default function Navbar() {
     
 
     return (
-    <div id="slideMenu" className={`shadow-neutral-900 shadow-lg w-full absolute top-12 left-0 `} >
-      <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 w-full  ${isOpen?'visible':'hidden'}`}>     
+    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-full absolute delay-150 transition duration-300 ${isOpen?'translate-y-[0px]':'-translate-y-[240px]'} top-[70px] left-0 `} >
+      <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 transition duration-300 w-full font-heading`}>     
         {
           menuItems.map((item, idx) => {
-            return <Link key={idx} className="block py-3 hover:bg-zinc-700 transition duration-300" name={item} onClick={toggleState}>{item}</Link>
+            return <Link key={idx} className="block py-3 hover:bg-zinc-700 font-semibold text-sm transition duration-300 opacity-50 hover:opacity-100" name={item} onClick={toggleState}>{item}</Link>
           })
         }
       </div>
@@ -37,11 +37,11 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex shadow-lg bg-main-200 shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-14">
+      <div className="flex shadow-lg bg-main-200 shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-14" >
         <MenuBox />
-        <div className="relative bg-main-200 w-full py-3 px-4 sm:max-w-xl h-14 flex justify-between desktop:max-w-[1440px] desktop:m-auto">
+        <div className="relative bg-main-200 w-full py-3 px-4 h-14 flex justify-between desktop:max-w-[1440px] desktop:m-auto">
           <Link href="/" onClick={()=> targets["Home"].scrollIntoView()} ><h1 className="font-heading font-extrabold text-2xl text-left text-gray-400 pt-">LW</h1></Link>
-          <nav >
+          <nav className="desktop:hidden">
             <button
               className="relative w-10 h-6 text-gray-500 rounded-sm focus:outline-none"
               onClick={()=> setOpen(!isOpen)}>
@@ -64,6 +64,15 @@ export default function Navbar() {
                   }`}></span>
               </div>
             </button>
+          </nav>
+          <nav className="hidden mx-2 desktop:flex desktop:items-center"> 
+            {
+              menuItems.map((menu, idx) => {
+                return <Link key={idx} name={menu} onClick={(evt)=> targets[evt.target.name].scrollIntoView()} 
+                          className="relative opacity-50 font-heading mx-3 font-semibold text-sm transition duration-300 hover:opacity-100">{menu}</Link>
+              })
+            }
+          
           </nav>
         </div>
       </div>
