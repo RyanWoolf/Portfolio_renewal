@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       name: "Weather App",
-      img: 'weatherApp.png',
+      img: './src/assets/projects/weatherApp.png',
       date: "2023 FEB",
       stack: "JS, React, PHP, Laravel",
       desc: "Simple weather app on Laravel",
@@ -13,7 +13,7 @@ const Projects = () => {
     },
     {
       name: "Commercial Web App",
-      img: 'commercialApp.png',
+      img: './src/assets/projects/commercialApp.png',
       date: "2023 FEB",
       stack: "JS, React, Express, Node, MongoDB",
       desc: "Real world web app on MERN",
@@ -21,7 +21,7 @@ const Projects = () => {
     },
     {
       name: "API Server",
-      img: 'apiServer.png',
+      img: './src/assets/projects/apiServer.png',
       date: "2022 NOV",
       stack: "Python, Flask",
       desc: "API server app on Flask",
@@ -29,7 +29,7 @@ const Projects = () => {
     },
     {
       name: "Terminal App",
-      img: 'terminalApp.png',
+      img: './src/assets/projects/terminalApp.png',
       date: "2022 SEP",
       stack: "Python",
       desc: "Terminal app on Python",
@@ -37,7 +37,7 @@ const Projects = () => {
     },
     {
       name: "Portfolio Web App",
-      img: 'portfolioWebApp.png',
+      img: './src/assets/projects/portfolioWebApp.png',
       date: "2022 SEP",
       stack: "HTML, CSS",
       desc: "First Portfolio web app on HTML",
@@ -45,42 +45,42 @@ const Projects = () => {
     },
     {
       name: "Melbourne Cup 2021",
-      img: 'restaurantEvent01.png',
+      img: './src/assets/projects/restaurantEvent01.png',
       date: "2021 SEP",
       desc: "Restaurant Event Poster",
       link: "../src/assets/projects/restaurantEvent01.png"
     },
     {
       name: "Dry July",
-      img: 'restaurantEvent02.png',
+      img: './src/assets/projects/restaurantEvent02.png',
       date: "2021 JUN",
       desc: "Restaurant Event Poster",
       link: "../src/assets/projects/restaurantEvent02.png"
     },
     {
       name: "Winter Party",
-      img: 'restaurantEvent03.png',
+      img: './src/assets/projects/restaurantEvent03.png',
       date: "2021 JUN",
       desc: "Restaurant Event Poster",
       link: "../src/assets/projects/restaurantEvent03.png"
     },
     {
       name: "Wine Dinner",
-      img: 'restaurantEvent04.png',
+      img: './src/assets/projects/restaurantEvent04.png',
       date: "2021 MAY",
       desc: "Restaurant Event Poster",
       link: "../src/assets/projects/restaurantEvent04.png"
     },
     {
       name: "International BurgerDay",
-      img: 'restaurantEvent05.png',
+      img: './src/assets/projects/restaurantEvent05.png',
       date: "2021 APR",
       desc: "Restaurant Event Poster",
       link: "../src/assets/projects/restaurantEvent05.png"
     },
     {
       name: "Restaurant Web App",
-      img: 'restaurantWebsite.png',
+      img: './src/assets/projects/restaurantWebsite.png',
       date: "2021 JAN",
       desc: "Website renewal on Wordpress",
       link: 'https://motorwagen.com.au/'
@@ -91,7 +91,7 @@ const Projects = () => {
       return (
             
         <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
-          style={{backgroundImage: `url(../src/assets/projects/${project.img})`}}>
+          style={{backgroundImage: `url(${project.img})`}}>
           <div className="w-full min-w-[320px] h-full p-8 relative">
             <h2 className="text-lg font-bold desktop:text-xl">{project.name}</h2>
             <h3 className="text-xs opacity-70 desktop:text-base">{project.date}</h3>
@@ -129,8 +129,8 @@ const Projects = () => {
         <div id="carousel-container" className="h-fit w-screen absolute left-0  desktop:flex desktop:justify-center desktop:h-">
           <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
             <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
-              <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10"} src="../src/assets/icons/icon_arrow_back.png"/></Link> 
-              <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10" src="../src/assets/icons/icon_arrow_forward.png"/></Link>
+              <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10"} src="./src/assets/icons/icon_arrow_back.png"/></Link> 
+              <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10" src="./src/assets/icons/icon_arrow_forward.png"/></Link>
             </div>
             <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x snap-mandatory desktop:max-h-[700px]">
               {projectsCards}
