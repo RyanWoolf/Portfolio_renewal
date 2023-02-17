@@ -90,7 +90,7 @@ const Projects = () => {
   const projectsCards = projects.map((project, idx) => {
       return (<>
             
-        <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-[32rem] bg-cover bg-center min-w-full" style={{backgroundImage: `url(../src/assets/projects/${project.img})`}}>
+        <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full bg-cover bg-center min-w-full" style={{backgroundImage: `url(../src/assets/projects/${project.img})`}}>
           <div className="w-full h-full p-8 relative">
             <h2 className="text-lg font-bold">{project.name}</h2>
             <h3 className="text-xs opacity-70">{project.date}</h3>
@@ -123,16 +123,17 @@ const Projects = () => {
 
 
   return (
-    <article name="Projects" className="bg-main-200 flex flex-col justify-start items-start w-full h-fit min-h-[740px] p-8 text-left">
-      <div className="max-w-xs mt-5">
-        <h1 className="font-heading font-bold text-2xl text-sub-2">Projects</h1>
-        <div id="carousel-container" className="absolute left-0 w-full h-full">
-          <div className="flex items-center justify-center relative ">
+    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[740px] p-8 text-left relative">
+      <div className="self-center max-w-xs mt-5 top-0">
+        <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px]">Projects</h1>
+        <div className=""></div>
+        <div id="carousel-container" className="h-fit w-screen absolute left-0">
+          <div className="flex items-center justify-center ">
             <div className="absolute z-10 top-1/2 w-full flex justify-between px-2">  
               <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 "} src="../src/assets/icons/icon_arrow_back.png"/></Link> 
               <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5" src="../src/assets/icons/icon_arrow_forward.png"/></Link>
             </div>
-            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[32rem] w-screen scroll-smooth snap-x snap-mandatory">
+            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x snap-mandatory">
               {projectsCards}
             </div>
           </div>
