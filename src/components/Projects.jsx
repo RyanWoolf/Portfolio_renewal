@@ -129,8 +129,8 @@ const Projects = () => {
         <div id="carousel-container" className="h-fit w-screen absolute left-0  desktop:flex desktop:justify-center desktop:h-">
           <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
             <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
-              <Link id="backward" onClick={moveBackward} className=""><img className={"inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10"} src="./src/assets/icons/icon_arrow_back.png"/></Link> 
-              <Link id="forward" onClick={moveForward} className=""><img className="inline w-6 h-6 rounded-full bg-neutral-600 opacity-40 p-1.5 desktop:w-10 desktop:h-10" src="./src/assets/icons/icon_arrow_forward.png"/></Link>
+              <Link id="backward" onClick={moveBackward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></Link> 
+              <Link id="forward" onClick={moveForward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></Link>
             </div>
             <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x snap-mandatory desktop:max-h-[700px]">
               {projectsCards}
