@@ -51,7 +51,7 @@ const Footer = () => {
         socials.map((social, idx) => {
           return (
             <a key={idx} href={social.url} target="_blank" className="text-gray-400 hover:text-gray-300 desktop:py-1 ">
-              <svg className="w-5 h-5 desktop:w-6 desktop:h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d={social.d} clip-rule="evenodd" /></svg>
+              <svg className="w-5 h-5 desktop:w-6 desktop:h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d={social.d} clipRule="evenodd" /></svg>
               <span className="sr-only">{social.name}</span>
             </a>
           )

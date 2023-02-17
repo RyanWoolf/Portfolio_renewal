@@ -88,7 +88,7 @@ const Projects = () => {
   ]
 
   const projectsCards = projects.map((project, idx) => {
-      return (<>
+      return (
             
         <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
           style={{backgroundImage: `url(../src/assets/projects/${project.img})`}}>
@@ -104,10 +104,8 @@ const Projects = () => {
             </div>
             <p className="origin-[0] w-max absolute bottom-5 pt-4 text-xs rotate-[270deg]  desktop:text-base">{project.desc}</p>
           </div>
-          
         </div>
-      </>
-        )
+      )
     })
 
 
