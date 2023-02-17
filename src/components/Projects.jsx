@@ -1,22 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import weatherApp from '../assets/projects/weatherApp.png'
-import apiServer from '../assets/projects/apiServer.png'
-import commercialApp from '../assets/projects/commercialApp.png'
-import portfolioWebApp from '../assets/projects/portfolioWebApp.png'
-import restaurantEvent01 from '../assets/projects/restaurantEvent01.png'
-import restaurantEvent02 from '../assets/projects/restaurantEvent02.png'
-import restaurantEvent03 from '../assets/projects/restaurantEvent03.png'
-import restaurantEvent04 from '../assets/projects/restaurantEvent04.png'
-import restaurantEvent05 from '../assets/projects/restaurantEvent05.png'
-import restaurantWebsite from '../assets/projects/restaurantWebsite.png'
-import terminalApp from '../assets/projects/terminalApp.png'
 
 const Projects = () => {
   const projects = [
     {
       name: "Weather App",
-      img: weatherApp,
+      img: "https://i.ibb.co/ZXqCdWM/weather-App.png",
       date: "2023 FEB",
       stack: "JS, React, PHP, Laravel",
       desc: "Simple weather app on Laravel",
@@ -24,7 +13,7 @@ const Projects = () => {
     },
     {
       name: "Commercial Web App",
-      img: commercialApp,
+      img: "https://i.ibb.co/S5yvJfT/commercial-App.png",
       date: "2023 FEB",
       stack: "JS, React, Express, Node, MongoDB",
       desc: "Real world web app on MERN",
@@ -32,7 +21,7 @@ const Projects = () => {
     },
     {
       name: "API Server",
-      img: apiServer,
+      img: "https://i.ibb.co/pd8CPvW/api-Server.png",
       date: "2022 NOV",
       stack: "Python, Flask",
       desc: "API server app on Flask",
@@ -40,7 +29,7 @@ const Projects = () => {
     },
     {
       name: "Terminal App",
-      img: terminalApp,
+      img: "https://i.ibb.co/HdrgshN/terminal-App.png",
       date: "2022 SEP",
       stack: "Python",
       desc: "Terminal app on Python",
@@ -48,7 +37,7 @@ const Projects = () => {
     },
     {
       name: "Portfolio Web App",
-      img: portfolioWebApp,
+      img: "https://i.ibb.co/fpP3QRL/portfolio-Web-App.png",
       date: "2022 SEP",
       stack: "HTML, CSS",
       desc: "First Portfolio web app on HTML",
@@ -56,42 +45,42 @@ const Projects = () => {
     },
     {
       name: "Melbourne Cup 2021",
-      img: restaurantEvent01,
+      img: "https://i.ibb.co/ZHMQ1g3/restaurant-Event01.png",
       date: "2021 SEP",
       desc: "Restaurant Event Poster",
-      link: restaurantEvent01
+      link: "https://i.ibb.co/ZHMQ1g3/restaurant-Event01.png"
     },
     {
       name: "Dry July",
-      img: restaurantEvent02,
+      img: "https://i.ibb.co/NZJDVNr/restaurant-Event02.png",
       date: "2021 JUN",
       desc: "Restaurant Event Poster",
-      link: restaurantEvent02
+      link: "https://i.ibb.co/NZJDVNr/restaurant-Event02.png"
     },
     {
       name: "Winter Party",
-      img: restaurantEvent03,
+      img: "https://i.ibb.co/94WzHrD/restaurant-Event03.png",
       date: "2021 JUN",
       desc: "Restaurant Event Poster",
-      link: restaurantEvent03
+      link: "https://i.ibb.co/94WzHrD/restaurant-Event03.png"
     },
     {
       name: "Wine Dinner",
-      img: restaurantEvent04,
+      img: "https://i.ibb.co/6BPf06W/restaurant-Event04.png",
       date: "2021 MAY",
       desc: "Restaurant Event Poster",
-      link: restaurantEvent04
+      link: "https://i.ibb.co/6BPf06W/restaurant-Event04.png"
     },
     {
       name: "International BurgerDay",
-      img: restaurantEvent05,
+      img: "https://i.ibb.co/K0bd92Y/restaurant-Event05.png",
       date: "2021 APR",
       desc: "Restaurant Event Poster",
-      link: restaurantEvent05
+      link: "https://i.ibb.co/K0bd92Y/restaurant-Event05.png"
     },
     {
       name: "Restaurant Web App",
-      img: restaurantWebsite,
+      img: "https://i.ibb.co/FBDTVB6/restaurant-Website.png",
       date: "2021 JAN",
       desc: "Website renewal on Wordpress",
       link: 'https://motorwagen.com.au/'

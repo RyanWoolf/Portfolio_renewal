@@ -1,7 +1,4 @@
 import React from 'react'
-import profilePhoto from '../assets/profilephoto.jpg'
-import resume from '../assets/Resume_RyanLee.pdf'
-
 
 const About = () => {
 
@@ -58,8 +55,8 @@ const About = () => {
             <p className="font-sans font-light text-xs">2023 | Diploma of Web Development, Coder Academy</p> 
           </div>
           <div className="flex flex-col justify-center items-center text-center">
-            <img src={profilePhoto} className="my-5 rounded-full border bg-contain w-44 h-44" />
-            <a className="text-sub-2 block rounded-full border-sub-2 px-3 py-1 mb-8 align-middle text-xs transition duration-300 border hover:drop-shadow-sub2 hover:text-main-200 hover:bg-sub-2 desktop:text-base" href={resume} target="_blank">Resume</a>
+            <img src='https://i.ibb.co/pJcMqjg/profilephoto.jpg' className="my-5 rounded-full border bg-contain w-44 h-44" />
+            <a className="text-sub-2 block rounded-full border-sub-2 px-3 py-1 mb-8 align-middle text-xs transition duration-300 border hover:drop-shadow-sub2 hover:text-main-200 hover:bg-sub-2 desktop:text-base" href='https://drive.google.com/file/d/1wZOpi337ZCVTk_wIqbgb1hg3KR5EX5W0/view?usp=sharing' target="_blank">Resume</a>
           </div>
         </div>
         <div className="desktop:w-[400px]">
