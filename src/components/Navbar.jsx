@@ -25,7 +25,7 @@ export default function Navbar() {
     
 
     return (
-    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-full absolute delay-150 transition duration-300 ${isOpen?'translate-y-[0px]':'-translate-y-[240px]'} top-[70px] left-0 `} >
+    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-full absolute delay-150 transition duration-300 ${isOpen?'static':'hidden'} top-[70px] left-0 `} >
       <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 transition duration-300 w-full font-heading`}>     
         {
           menuItems.map((item, idx) => {
