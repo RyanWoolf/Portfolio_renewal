@@ -68,7 +68,10 @@ export default function Navbar() {
           <nav className="hidden mx-2 desktop:flex desktop:items-center"> 
             {
               menuItems.map((menu, idx) => {
-                return <Link key={idx} name={menu} onClick={(evt)=> targets[evt.target.name].scrollIntoView()} 
+                return <Link key={idx} name={menu} onClick={(evt) => {
+                  targets[evt.target.name].scrollIntoView()
+                  evt.preventDefault()
+                }} 
                           className="relative opacity-50 font-heading mx-3 font-semibold text-sm transition duration-300 hover:opacity-100">{menu}</Link>
               })
             }
