@@ -90,7 +90,7 @@ const Projects = () => {
   const projectsCards = projects.map((project, idx) => {
       return (
             
-        <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
+        <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full  bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
           style={{backgroundImage: `url(${project.img})`}}>
           <div className="w-full min-w-fit h-full p-8 relative">
             <h2 className="text-lg font-bold desktop:text-xl">{project.name}</h2>
@@ -122,17 +122,17 @@ const Projects = () => {
 
 
   return (
-    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[700px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-[65vh] desktop:items-center">
+    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[700px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-max desktop:items-center">
       <div className="self-center max-w-xs mt-5 top-0 flex flex-col">
         <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
-        <div className=""></div>
+        <div className="h-[75vh] min-h-[450px]"></div>
         <div id="carousel-container" className="h-fit w-screen absolute left-0 top-20 desktop:flex desktop:justify-center desktop:top-32">
           <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
             <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
               <Link id="backward" onClick={moveBackward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></Link> 
               <Link id="forward" onClick={moveForward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></Link>
             </div>
-            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x snap-mandatory desktop:max-h-[700px]">
+            <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x min-h-[500px] snap-mandatory desktop:max-h-[700px]">
               {projectsCards}
             </div>
           </div>
