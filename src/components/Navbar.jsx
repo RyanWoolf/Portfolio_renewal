@@ -16,8 +16,8 @@ export default function Navbar() {
   const toggleState = (evt) => {
     setOpen(!isOpen)
     evt.preventDefault()
-
-    console.log(targets.Home)
+    targets[evt.target.name]?.scrollIntoView()
+    console.log(targets[evt.target.name])
   };
 
   const MenuBox = () => {
