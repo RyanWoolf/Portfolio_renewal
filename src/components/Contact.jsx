@@ -72,7 +72,7 @@ const Contact = () => {
 
 
   return (
-    <article id='Contact' className="bg-main-100 flex flex-col justify-center items-center w-full h-fit min-h-[650px] px-8 pt-8 text-left relative">
+    <article id='Contact' className="bg-main-100 flex flex-col justify-center items-center w-full h-fit min-h-[650px] px-8 pt-8 text-left">
       <div className="max-w-[400px] w-full flex flex-col justify-center desktop:max-w-[550px]">
         <h1 className="block self-start font-heading font-bold text-xl mt-5 text-sub-2 desktop:text-3xl desktop:self-center">Contact</h1>
         <p className="font-sans font-light text-xs desktop:self-center desktop:text-base">Feel free to ask me anything about me.</p>

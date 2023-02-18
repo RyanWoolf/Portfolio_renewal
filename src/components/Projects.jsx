@@ -122,11 +122,11 @@ const Projects = () => {
 
 
   return (
-    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[740px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-[65vh] desktop:items-center">
-      <div className="self-center max-w-xs mt-5 top-0">
+    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[700px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-[65vh] desktop:items-center">
+      <div className="self-center max-w-xs mt-5 top-0 flex flex-col">
         <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
         <div className=""></div>
-        <div id="carousel-container" className="h-fit w-screen absolute left-0  desktop:flex desktop:justify-center desktop:h-">
+        <div id="carousel-container" className="h-fit w-screen absolute left-0 top-20 desktop:flex desktop:justify-center desktop:top-32">
           <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
             <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
               <Link id="backward" onClick={moveBackward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></Link> 
