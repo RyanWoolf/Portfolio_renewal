@@ -125,7 +125,7 @@ const Projects = () => {
     <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[700px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-max desktop:items-center">
       <div className="self-center max-w-xs mt-5 top-0 flex flex-col">
         <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
-        <div className="h-[75vh] min-h-[450px]"></div>
+        <div className="h-[75vh] min-h-[450px] max-h-[720px]"></div>
         <div id="carousel-container" className="h-fit w-screen absolute left-0 top-20 desktop:flex desktop:justify-center desktop:top-32">
           <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
             <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
