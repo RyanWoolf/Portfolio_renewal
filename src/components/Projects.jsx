@@ -92,7 +92,7 @@ const Projects = () => {
             
         <div id={project.img} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
           style={{backgroundImage: `url(${project.img})`}}>
-          <div className="w-full min-w-[320px] h-full p-8 relative">
+          <div className="w-full min-w-fit h-full p-8 relative">
             <h2 className="text-lg font-bold desktop:text-xl">{project.name}</h2>
             <h3 className="text-xs opacity-70 desktop:text-base">{project.date}</h3>
             <p className="text-xs  desktop:text-base">{project.stack}</p>
