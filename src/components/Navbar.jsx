@@ -25,8 +25,8 @@ export default function Navbar() {
     
 
     return (
-    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-full absolute delay-150 transition duration-300 ${isOpen?'static':'hidden'} top-[70px] left-0 `} >
-      <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 transition duration-300 w-full font-heading`}>     
+    <div id="slideMenu"  className={`shadow-neutral-900 shadow-lg w-full absolute delay-150 transition duration-300 ${isOpen?'static':'hidden'} top-[45px] left-0 `} >
+      <div id="menu-container" aria-label="menu" aria-hidden="true" className={`bg-main-100 transition duration-300 w-full font-heading pt-5`}>     
         {
           menuItems.map((item, idx) => {
             return <Link to="/" key={idx} className="block py-3 hover:bg-zinc-700 font-semibold text-sm transition duration-300 opacity-50 hover:opacity-100" name={item} onClick={toggleState}>{item}</Link>
