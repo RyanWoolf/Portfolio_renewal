@@ -13,27 +13,43 @@ const Projects = () => {
 
   const projects = [
     {
+      name: "Point Of Sales System",
+      img: "https://i.ibb.co/6gstHwS/Screenshot-2023-02-22-at-22-45-00.png",
+      date: "Current",
+      stack: "Laravel, PHP, React, TailwindCSS, PostgreSQL",
+      desc: "Fully working POS system web app for a restaurant. This project based on the previous project 'API server'. You can manage orders, tables, receipts and else.",
+      link: 'https://github.com/RyanWoolf/'
+    },
+    {
+      name: "New Portfolio website",
+      img: "https://i.ibb.co/dmr1HH0/Screenshot-2023-02-23-at-12-07-22.png",
+      date: "Current",
+      stack: "HTML, React, TailwindCSS",
+      desc: "New Portfolio website based on React. The main concept extended from the previous project 'Portfolio web app', added organized structure and more functions such as SPA, Modal and Emailing component.",
+      link: 'https://github.com/RyanWoolf/Portfolio_renewal'
+    },
+    {
       name: "Weather App",
       img: "https://i.ibb.co/ZXqCdWM/weather-App.png",
       date: "2023 FEB",
       stack: "JS, React, PHP, Laravel",
-      desc: "Simple weather app on Laravel",
+      desc: "Simple MVC weather app on Laravel. Data comes from Weather API and the controller process data to send the frontend. Daily report which is 5 days forecast of all cities will be printed on console through a button in the app.  ",
       link: 'https://github.com/RyanWoolf/WeatherApp'
     },
     {
-      name: "Commercial Web App",
+      name: "Fullstack Web App",
       img: "https://i.ibb.co/S5yvJfT/commercial-App.png",
       date: "2023 FEB",
       stack: "JS, React, Express, Node, MongoDB",
-      desc: "Real world web app on MERN",
+      desc: "Fullstack app on MERN stack. It offers Join/Login&out, booking a service or cancel based on JWT.",
       link: 'https://github.com/RyanWoolf/T3A2'
     },
     {
-      name: "API Server",
+      name: "POS System API Server",
       img: "https://i.ibb.co/pd8CPvW/api-Server.png",
       date: "2022 NOV",
       stack: "Python, Flask",
-      desc: "API server app on Flask",
+      desc: "API server app on Flask. It involves server concepts such as routing, and handling the communication of data between users and a data storage medium. ",
       link: 'https://github.com/RyanWoolf/API_Webserver'
     },
     {
@@ -41,7 +57,7 @@ const Projects = () => {
       img: "https://i.ibb.co/HdrgshN/terminal-App.png",
       date: "2022 SEP",
       stack: "Python",
-      desc: "Terminal app on Python",
+      desc: "Terminal app on Python. It accepts user input in the form of text input produces printed output or interact with the file system.",
       link: 'https://github.com/RyanWoolf/Terminal_App'
     },
     {
@@ -120,8 +136,8 @@ const Projects = () => {
         <div id={project.img} onMouseUp={clickOutside} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full  bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
           style={{backgroundImage: `url(${project.img})`}}>
           <div className="w-full min-w-fit h-full p-8 relative" >
-            <h2 className="text-lg font-bold desktop:text-xl opacity-90">{project.name}</h2>
-            <h3 className="text-xs opacity-60 font-semibold  desktop:text-base">{project.date}</h3>
+            <h2 className="text-lg font-bold desktop:text-xl opacity-90 leading-5 ">{project.name}</h2>
+            <h3 className="text-xs opacity-60 font-semibold mt-1 desktop:text-base">{project.date}</h3>
             <div className="z-1 w-full flex justify-center items-center absolute bottom-1/2 left-0 transition duration-500 opacity-10 hover:opacity-100">
             {/* Modal button */}
               <section className=" flex p-10 justify-center items-start">
@@ -130,13 +146,13 @@ const Projects = () => {
               </section>
             </div>
             {/* Modal content start */}
-            <dialog id={`myModal${idx}`} className=" bg-gray-700 rounded-lg top-1/3 left-[calc(50vw-42vw)] tablet:left-[calc(50vw-250px)] desktop:left-[calc(50vw-250px)] ">
+            <dialog id={`myModal${idx}`} className="m-auto bg-gray-700 rounded-lg">
               <div className="flex flex-col h-auto justify-center items-center w-[84vw]  tablet:w-[500px] desktop:w-[500px]">
                     {/* <!-- Header --> */}
                 <div className="flex w-full h-auto justify-between items-center p-4 border-b border-gray-600 desktop:p-7">
                   <div className="flex flex-col h-auto justify-center items-start">
-                    <h3 className="text-base -mb-0.5 font-semibold text-gray-300 desktop:text-lg">{project.name}</h3>
-                    <h3 className="text-xs opacity-60 desktop:text-xs">{project.date}</h3>
+                    <h3 className="text-base leading-4 font-semibold text-gray-300 desktop:text-lg">{project.name}</h3>
+                    <h3 className="text-xs mt-1 opacity-60 desktop:text-xs">{project.date}</h3>
                   </div>
                   <button type="button" onClick={closeModal} className=" duration-300 top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
                     <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
