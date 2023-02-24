@@ -56,7 +56,7 @@ const About = () => {
           </div>
           <div className="flex flex-col justify-center items-center text-center">
             <img src='https://i.ibb.co/pJcMqjg/profilephoto.jpg' className="my-5 rounded-full border bg-contain w-44 h-44" />
-            <a className="text-sub-2 block rounded-full border-sub-2 px-3 py-1 mb-8 align-middle text-xs transition duration-300 border hover:drop-shadow-sub2 hover:text-main-200 hover:bg-sub-2 desktop:text-base" href='https://drive.google.com/file/d/1wZOpi337ZCVTk_wIqbgb1hg3KR5EX5W0/view?usp=sharing' target="_blank">Resume</a>
+            <a className="text-white block rounded-full  border-sub-1 bg-sub-1 px-4 py-1 mb-8 align-middle text-xs transition duration-300 border hover:drop-shadow-sub1 desktop:text-base" href='https://drive.google.com/file/d/1wZOpi337ZCVTk_wIqbgb1hg3KR5EX5W0/view?usp=sharing' target="_blank">Resume</a>
           </div>
         </div>
         <div className="desktop:w-[400px]">
