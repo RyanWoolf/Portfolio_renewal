@@ -22,8 +22,8 @@ The app offers the below functions :
 ## **Tech Stack**
 ----  
 <div>
-<img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/languages/html.png">
-<img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/languages/css.png">
+<img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/languages/HTML.png">
+<img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/languages/CSS.png">
 <img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/languages/Javascript.png">
 <img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/libraries/React.png">
 <img style="width:40px" src="./scr/assets/icons/../../../src/assets/icons/skills/libraries/TailwindCSS.png">
