@@ -18,7 +18,7 @@ const Projects = () => {
       date: "Current",
       stack: "Laravel, PHP, React, TailwindCSS, PostgreSQL",
       desc: "Fully working POS system web app for a restaurant. This project based on the previous project 'API server'. You can manage orders, tables, receipts and else.",
-      link: 'https://github.com/RyanWoolf/'
+      link: 'https://github.com/RyanWoolf/POS_System'
     },
     {
       name: "New Portfolio website",
