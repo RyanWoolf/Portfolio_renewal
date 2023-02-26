@@ -3,13 +3,6 @@ import { Modal } from 'flowbite';
 import { Link } from 'react-router-dom'
 
 const Projects = () => {
-  // useEffect(() => {
-  //   document.body.style.overflow = 'hidden';
-  //   return () => {
-  //     document.body.style.overflow = 'auto';
-  //   };
-  // }, []);
-
 
   const projects = [
     {
@@ -133,16 +126,23 @@ const Projects = () => {
 
       return (
             
-        <div id={project.img} onMouseUp={clickOutside} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full  bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
+        <div id={project.img} onMouseUp={clickOutside} key={idx} className="flex flex-col snap-center bg-stone-600 bg-blend-multiply h-full transition duration-300 hover:bg-stone-400 bg-cover bg-center min-w-full tablet:min-w-[50%] tablet:snap-start desktop:min-w-[25%] desktop:snap-start desktop:max-h-[700px]" 
           style={{backgroundImage: `url(${project.img})`}}>
           <div className="w-full min-w-fit h-full p-8 relative" >
-            <h2 className="text-lg font-bold desktop:text-xl opacity-90 leading-5 ">{project.name}</h2>
-            <h3 className="text-xs opacity-60 font-semibold mt-1 desktop:text-base">{project.date}</h3>
-            <div className="z-1 w-full flex justify-center items-center absolute bottom-1/2 left-0 transition duration-500 opacity-10 hover:opacity-100">
+            <h2 className="text-lg font-bold desktop:text-xl opacity-90 leading-5 text-shadow-200">{project.name}</h2>
+            {/* <button onClick={openModal} id="btn" className="block text-left focus:outline-none font-medium">
+              <h2 className="text-lg font-bold desktop:text-xl opacity-90 leading-5 text-shadow-200">{project.name}</h2>
+            </button> */}
+            <h3 className="text-xs opacity-60 font-semibold  desktop:text-base text-shadow-200 mb-2">{project.date}</h3>
+            <div className="z-1 w-full flex items-center transition duration-300 opacity-70 hover:opacity-100">
             {/* Modal button */}
-              <section className=" flex p-10 justify-center items-start">
-                <button onClick={openModal} id="btn" className="block  text-white bg-sub-2 opacity-80 hover:bg-sub-2  focus:outline-none font-medium rounded-full text-sm px-3 py-3 text-center"><svg className="opacity-70" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M13 10h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2zm8.172 14l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg></button>
+              <section className=" flex justify-center items-start">
+                <button onClick={openModal} id="btn" className="block text-white bg-sub-1 focus:outline-none font-medium rounded-full text-sm px-1.5 py-0.5 text-center ">
+                  <h2 className="text-xs opacity-90 leading-5 text-shadow-200">Read <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className='inline' width="18" height="18" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.568 18.005l-1.414-1.415 4.574-4.59-4.574-4.579 1.414-1.416 5.988 5.995-5.988 6.005z"/></svg></h2>
+                  {/* <h2 className="text-xs opacity-90 leading-5 text-shadow-200">Read <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className='inline' width="13" height="13" viewBox="0 0 24 24"><path d="M0 3.795l2.995-2.98 11.132 11.185-11.132 11.186-2.995-2.981 8.167-8.205-8.167-8.205zm18.04 8.205l-8.167 8.205 2.995 2.98 11.132-11.185-11.132-11.186-2.995 2.98 8.167 8.206z"/></svg></h2> */}
+                </button>
+                  {/* <svg className="opacity-70" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M13 10h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2zm8.172 14l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg> */}
               </section>
             </div>
             {/* Modal content start */}
@@ -197,10 +197,17 @@ const Projects = () => {
         <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
         <div className="h-[75vh] min-h-[450px] max-h-[720px]"></div>
         <div id="carousel-container" className="h-fit w-screen absolute left-0 top-20 desktop:flex desktop:justify-center desktop:top-32">
-          <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]">
-            <div className="absolute z-10 top-1/2 w-full flex justify-between px-2  desktop:max-w-[1440px]">  
-              <Link id="backward" onClick={moveBackward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></Link> 
-              <Link id="forward" onClick={moveForward} className=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></Link>
+          <div className="flex items-center justify-center min-w-[320px] desktop:max-w-[1440px]"> 
+              {/* <Link id="backward" onClick={moveBackward} className="absolute z-10 left-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+              </Link> 
+              <Link id="forward" onClick={moveForward} className="absolute z-10 right-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+              </Link> */}
+
+            <div className="absolute z-10 mx-auto w-full flex justify-between px-2  desktop:max-w-[1440px]">  
+              <Link id="backward" onClick={moveBackward} className="rounded-full bg-neutral-700/[.2] p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></Link> 
+              <Link id="forward" onClick={moveForward} className="rounded-full bg-neutral-700/[.2] p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="white" className="opacity-50" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></Link>
             </div>
             <div id="projects-carousel" className="relative my-5 flex overflow-hidden overflow-x-scroll bg-main-100 h-[75vh] w-screen scroll-smooth snap-x min-h-[500px] snap-mandatory desktop:max-h-[700px]">
               {projectsCards}

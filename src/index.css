@@ -34,4 +34,8 @@ dialog::backdrop {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
   backdrop-filter: blur(3px);
 }
+
+.text-shadow-200 {
+  text-shadow: 2px 2px 10px #2c2d31b7;
+}
   

@@ -41,10 +41,10 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex shadow-lg bg-main-200 shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-14" >
+      <div id="Navbar" className="flex shadow-lg bg-main-200 shadow-neutral-900 sticky w-full top-0 z-20 flex-col justify-center h-14" >
         <MenuBox />
         <div className="relative bg-main-200 w-full py-3 px-4 h-14 flex justify-between desktop:max-w-[1440px] desktop:m-auto">
-          <a href="#Home" onClick={()=> targets[Home]?.scrollIntoView()} ><h1 className="font-heading font-extrabold text-2xl text-left text-gray-400 pt-">LW</h1></a>
+          <a href="#Home" onClick={()=> targets[Home]?.scrollIntoView()} ><h1 className="font-heading font-extrabold text-2xl text-left text-gray-300 transition duration-300 hover:text-gray-100">LW</h1></a>
           <nav className="desktop:hidden">
             <button
               className="relative w-10 h-6 text-gray-500 rounded-sm focus:outline-none"
@@ -76,7 +76,7 @@ export default function Navbar() {
                   targets[evt.target.name]?.scrollIntoView()
                   // targets[menu].scrollIntoView()
                   setOpen(false)}
-                } className="relative opacity-50 font-heading mx-3 font-semibold text-sm transition duration-300 hover:opacity-100">{menu}</a>
+                } className="relative text-gray-400 font-heading mx-3 font-semibold text-sm transition duration-300 hover:text-gray-100 hover:animate-none">{menu}</a>
               })
             }
           
