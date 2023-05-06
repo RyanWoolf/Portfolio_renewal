@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../../public/Resume_Ryan_May2023.pdf'
+import resume from '../Resume_Ryan_May2023.pdf'
 
 const About = () => {
 
