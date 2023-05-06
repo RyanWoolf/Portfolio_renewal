@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
   <footer className="bg-main-200 flex flex-col justify-center items-center h-fit pt-7">
-    <a href="https://github.com/RyanWoolf" target="_blank" className="px-4 py-4 flex flex-col justify-center items-center ">
+    <div className="px-4 py-4 flex flex-col justify-center items-center ">
       <GitHubCalendar username="ryanwoolf" hideColorLegend fontSize={10} blockSize={8} hideTotalCount blockMargin={3}
       transformData={selectLastHalfYear} 
       theme={{
@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
       <span className="text-[12px] text-gray-500 mt-2">© {new Date().getFullYear()} <a href="https://github.com/RyanWoolf?tab=repositories">LionWolf Haus</a>. All Rights Reserved.
       </span>
-    </a>
+    </div>
 
   
 
