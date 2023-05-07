@@ -66,42 +66,42 @@ const Contact = () => {
         <img src="../src/assets/icons/icon_done_white.png" className="w-4 h-4 rounded-full border-gray-200 border-solid border-2" />
       )
     } else {
-      return "Send"
+      return <p className="text-xs font-medium">Send</p>
     }
   }
 
 
   return (
-    <article id='Contact' className="bg-main-100 flex flex-col justify-center items-center w-full h-fit min-h-[650px] px-8 pt-8 text-left">
+    <article id='Contact' className="bg-main-100 flex flex-col justify-center items-center w-full h-fit min-h-[650px] px-8 pt-8 text-left font-medium">
       <div className="max-w-[400px] w-full flex flex-col justify-center desktop:max-w-[550px]">
         <h1 className="block self-start font-heading font-bold text-xl mt-5 text-sub-2 desktop:text-3xl desktop:self-center">Contact</h1>
-        <p className="font-sans font-light text-xs desktop:self-center desktop:text-base">Feel free to ask me anything about me.</p>
+        <p className="font-sans text-xs desktop:self-center desktop:text-sm">Feel free to ask me anything about me.</p>
         <form className="w-full max-w-[550px] flex flex-col justify-center items-center mt-5 " ref={form} onSubmit={sendEmail}>
           <div className="relative w-full my-1">
             <input type="text" id="floating_outlined" placeholder=" " name="user_name" required value={values.user_name} onInput={onInput}
               className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer desktop:h-11" />
             <label htmlFor="floating_outlined" 
-              className="absolute text-xs text-gray-400  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100  px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 desktop:text-base">Name *</label>
+              className="absolute text-xs text-gray-400  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100  px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 desktop:text-sm">Name *</label>
           </div>
           <div className="relative w-full my-1">
             <input type="email" id="floating_outlined" placeholder=" " name="user_email" required value={values.user_email} onInput={onInput}
               className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer desktop:h-11" />
             <label htmlFor="floating_outlined" 
-              className="absolute text-xs text-gray-400  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 desktop:text-base">Email *</label>
+              className="absolute text-xs text-gray-400  duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 desktop:text-sm">Email *</label>
           </div>
           <div className="relative w-full my-1">
             <input type="tel" id="floating_outlined" placeholder=" " name="user_phone"  value={values.user_phone} onInput={onInput}
               className="block px-2.5 pb-2.5 pt-4 w-full h-9 text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer desktop:h-11" />
             <label htmlFor="floating_outlined" 
-              className="absolute text-xs text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 desktop:text-base">Contact</label>
+              className="absolute text-xs text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 desktop:text-sm">Contact</label>
           </div>
           <div className="relative w-full my-1">
             <textarea id="floating_outlined" placeholder=" " name="message" required rows="8" value={values.message} onInput={onInput}
               className="resize-none block px-2.5 pb-2.5 pt-4 w-full text-xs text-neutral-300 bg-transparent border-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-sub-1 peer" />
             <label htmlFor="floating_outlined" 
-              className="absolute block top-3 text-xs text-gray-400 duration-300 transform -translate-y-5 scale-75 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1 desktop:text-base">Message *</label>
+              className="absolute block top-3 text-xs text-gray-400 duration-300 transform -translate-y-5 scale-75 z-5 origin-[0] bg-main-100 px-2 peer-focus:px-2 peer-focus:text-sub-1 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:scale-75 peer-focus:pb-2 peer-focus:-translate-y-4 left-1 desktop:text-sm">Message *</label>
           </div>
-          <button className="my-4 bg-sub-1 hover:drop-shadow-sub1 transition duration-300 w-20 h-7 rounded-full text-xs desktop: desktop:scale-[120%]" type="submit">
+          <button className="my-4 bg-sub-1 hover:drop-shadow-sub1 transition duration-300 w-20 h-7 rounded-full desktop: desktop:scale-[120%]" type="submit">
             <div role="status" className="relative flex flex-col justify-center items-center">
               {sending()}
             </div>

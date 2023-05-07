@@ -138,7 +138,7 @@ const Projects = () => {
             {/* Modal button */}
               <section className=" flex justify-center items-start">
                 <button onClick={openModal} id="btn" className="block text-white bg-sub-1 focus:outline-none font-medium rounded-full text-sm px-1.5 py-0.5 text-center ">
-                  <h2 className="text-xs opacity-90 leading-5 text-shadow-200">Read <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className='inline' width="18" height="18" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.568 18.005l-1.414-1.415 4.574-4.59-4.574-4.579 1.414-1.416 5.988 5.995-5.988 6.005z"/></svg></h2>
+                  <h2 className="text-xs opacity-90 leading-5 text-shadow-200 my-0.5 mx-1.5">Read <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className='inline' width="18" height="18" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.568 18.005l-1.414-1.415 4.574-4.59-4.574-4.579 1.414-1.416 5.988 5.995-5.988 6.005z"/></svg></h2>
                   {/* <h2 className="text-xs opacity-90 leading-5 text-shadow-200">Read <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className='inline' width="13" height="13" viewBox="0 0 24 24"><path d="M0 3.795l2.995-2.98 11.132 11.185-11.132 11.186-2.995-2.981 8.167-8.205-8.167-8.205zm18.04 8.205l-8.167 8.205 2.995 2.98 11.132-11.185-11.132-11.186-2.995 2.98 8.167 8.206z"/></svg></h2> */}
                 </button>
                   {/* <svg className="opacity-70" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
@@ -192,7 +192,7 @@ const Projects = () => {
 
 
   return (
-    <article id="Projects" className="bg-main-200 flex flex-col justify-start w-full h-[90vh] min-h-[700px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-max desktop:items-center">
+    <article id="Projects" className="bg-main-100 flex flex-col justify-start w-full h-[90vh] min-h-[700px] p-8 text-left relative desktop:pt-12 desktop:min-h-[820px] desktop:h-max desktop:items-center">
       <div className="self-center max-w-xs mt-5 top-0 flex flex-col">
         <h1 className="font-heading font-bold text-xl text-sub-2 max-w-xs w-[81vw] min-w-[200px] desktop:text-3xl desktop:text-center desktop:mb-5">Projects</h1>
         <div className="h-[75vh] min-h-[450px] max-h-[720px]"></div>
